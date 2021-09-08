@@ -8,6 +8,10 @@ public class Paciente {
 	private int edad;
 	private int nroTurno;
 	
+	public static String  provincia = "Pichincha";  // VARIABLE STATIC 
+	public static String  pais = "Ecuador";			// VARIABLE STATIC 
+	
+	
 	
 	public void atender () {
 		
