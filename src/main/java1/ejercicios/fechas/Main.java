@@ -1,6 +1,7 @@
 package ejercicios.fechas;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class Main {
@@ -52,6 +53,10 @@ public class Main {
 		curso3.setNombre("Karate");
 		curso3.setFechaInicio(FechaEspecificaIniT1);
 		curso3.setFechaFin(FechaEspecificaFinT1);
+		
+		Instructor instructor = new Instructor();
+		
+		
 		LocalDate fechaVista =curso3.getFechaFin();
 		LocalDate fechaVistaNueva = fechaVista.plusDays(3);
 		
@@ -61,7 +66,11 @@ public class Main {
 		System.out.println("Fecha inicio: " + curso3.getFechaInicio());
 		System.out.println("Fecha fin: " + curso3.getFechaFin());
 		
+		System.out.println("Fecha fin formateada: " + curso3.getFechaFin().format(DateTimeFormatter.ofPattern("mm/dd/yyyy")));
 		
+		LocalDate diaHoy3 = LocalDate.now();
+		System.out.println(diaHoy3.format(DateTimeFormatter.ofPattern("dd-mm-yyyy")));
+		System.out.println(diaHoy3.format(DateTimeFormatter.ofPattern("yyy-mm-aa")));
 	}
 
 }
